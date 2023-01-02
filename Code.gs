@@ -1,10 +1,10 @@
 function addTech(){
 
-  let sheetR = SpreadsheetApp.getActive().getSheetByName('BAS-S9000-TEC');
-  let sheetW = SpreadsheetApp.getActive().getSheetByName('charge tech par jour')
+  let sheetR = SpreadsheetApp.getActive().getSheetByName('FirstFile');
+  let sheetW = SpreadsheetApp.getActive().getSheetByName('SecondFile')
 
 
-  var DonnesDuTableauLine1 = SpreadsheetApp.getActive().getSheetByName('BAS-S9000-TEC').getRange('A1:C1')
+  var DonnesDuTableauLine1 = SpreadsheetApp.getActive().getSheetByName('FirstFile').getRange('A1:C1')
   
   DonnesDuTableauLine1.getCell(1,1).setValue('Non')
   DonnesDuTableauLine1.getCell(1,2).setValue('Matricule')
