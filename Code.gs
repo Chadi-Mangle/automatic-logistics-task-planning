@@ -4,16 +4,16 @@ function addTech(){
   let sheetW = SpreadsheetApp.getActive().getSheetByName('charge tech par jour')
 
 
-  var DonnesDuTableauLine1 = SpreadsheetApp.getActive().getSheetByName('BAS-S9000-TEC').getRange('A1:C1');
+  var DonnesDuTableauLine1 = SpreadsheetApp.getActive().getSheetByName('BAS-S9000-TEC').getRange('A1:C1')
   
-  DonnesDuTableauLine1.getCell(1,1).setValue('Non');
-  DonnesDuTableauLine1.getCell(1,2).setValue('Matricule');
-  var cell = sheetR.getRange("C1");
-  cell.setNumberFormat("@");
+  DonnesDuTableauLine1.getCell(1,1).setValue('Non')
+  DonnesDuTableauLine1.getCell(1,2).setValue('Matricule')
+  var cell = sheetR.getRange("C1")
+  cell.setNumberFormat("@")
 
 
   let techList = []
-  let datasheetR = sheetR.getDataRange().getValues();
+  let datasheetR = sheetR.getDataRange().getValues()
 
   
   for (var i in datasheetR){
@@ -48,15 +48,11 @@ function addTech(){
           if (charge > techList[j][1]){
             range.getCell(row+1, col).setFontColor('red')
             range.getCell(row+1, col+1).setFontColor('red')
-          }else{
+          }
+          else{
             range.getCell(row+1, col).setFontColor('#1c4587')
             range.getCell(row+1, col+1).setFontColor('#1c4587')
-          }
-        
-
-
-        }
-    }
+          }}}
   }
   
   var sumChargeTacheprv = 0
